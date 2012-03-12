@@ -1,4 +1,3 @@
-#import <stdio.h>
 #import <Foundation/NSRegularExpression.h>
 #import "regex.h"
 
