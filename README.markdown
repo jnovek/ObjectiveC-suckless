@@ -8,6 +8,7 @@ I have been a Ruby programmer for many years.  One of my favorite things about R
 ###Regular Expressions
 
 Usage:
+
      [Regex match: @"(abc|def)" :to @"I like my abcs and defs!"]
      => true
 
