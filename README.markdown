@@ -9,8 +9,8 @@ I have been a Ruby programmer for many years.  One of my favorite things about R
 
 Usage:
 
-     [Regex match: @"(abc|def)" :to @"I like my abcs and defs!"]
+     [Regex match: @"(abc|def)" to: @"I like my abcs and defs!"]
      => true
 
-     [Regex match: @"(abc|def)" :to @"I like my abcs and defs!" :andReplaceWith: "blah"]
+     [Regex match: @"(abc|def)" to: @"I like my abcs and defs!" andReplaceWith: "blah"]
      => @"I like my blahs and blahs!"
