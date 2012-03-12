@@ -1,3 +1,4 @@
+#import <stdio.h>
 #import <Foundation/NSRegularExpression.h>
 #import "regex.h"
 
@@ -20,9 +21,10 @@
 //
 
 -(void) setExpression: (NSString *) s {
+	error = NULL; // TODO I need to figure out what this means
 	expression = [NSRegularExpression regularExpressionWithPattern: s
 									  options:						0
-									  error:						0
+									  error:						&error
 				 ];
 }
 
@@ -46,9 +48,15 @@
 //
 
 -(bool) matchWithString: (NSString *) str {
-//	result = [expression ]
-//	if (result == {NSNotFound, 0})
-	return false;
+	int result = [expression numberOfMatchesInString: str
+	                                    options: 0
+	                                    range: NSMakeRange(0, [str length])
+				 ];
+	if (result > 0) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 -(NSString*) replaceInString: (NSString *) str with: new_str {

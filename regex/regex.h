@@ -3,6 +3,7 @@
 
 @interface Regex: NSObject {
 	NSRegularExpression *expression;
+	NSError *error;
 }
 
 // Constructor
